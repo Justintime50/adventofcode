@@ -5,6 +5,8 @@ An Advent calendar of coding challenges. https://adventofcode.com/2020
 [![Build Status](https://travis-ci.com/Justintime50/adventofcode-2020.svg?branch=master)](https://travis-ci.com/Justintime50/adventofcode-2020)
 [![Licence](https://img.shields.io/github/license/justintime50/adventofcode-2020)](LICENSE)
 
+> The real challenge is writing good code - quickly without hating how it turns out.
+
 **Note:** Everyone's data will be different, while the scripts should work for anyone, you'll need to adjust the `static_data` file if you want to use it for yourself.
 
 ## Install
@@ -18,6 +20,8 @@ make help
 ```
 
 ## Usage
+
+Each day you'll get a prompt containing two parts. Find the [promps here](prompts).
 
 Run a script for a particular day, the output should be the answer you can plug into the Advent of Code daily challenge.
 

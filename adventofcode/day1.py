@@ -37,7 +37,7 @@ def sum_three_numbers():
                 sum_total = num_1 + num_2 + num_3
                 if sum_total == num_to_equal:
                     print(f'{num_1} + {num_2} + {num_3} = {sum_total}')
-                    print(f'{num_1} * {num_2} + {num_3} = {num_1 * num_2 * num_3}')
+                    print(f'{num_1} * {num_2} * {num_3} = {num_1 * num_2 * num_3}')
                     return
     print(f'No numbers sum together to equal {num_to_equal}')
 
