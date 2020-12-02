@@ -2,8 +2,8 @@
 
 An Advent calendar of coding challenges. https://adventofcode.com/2020
 
-[![Build Status](https://travis-ci.com/Justintime50/adventofcode.svg?branch=master)](https://travis-ci.com/Justintime50/adventofcode)
-[![Licence](https://img.shields.io/github/license/justintime50/adventofcode)](LICENSE)
+[![Build Status](https://travis-ci.com/Justintime50/adventofcode-2020.svg?branch=master)](https://travis-ci.com/Justintime50/adventofcode-2020)
+[![Licence](https://img.shields.io/github/license/justintime50/adventofcode-2020)](LICENSE)
 
 **Note:** Everyone's data will be different, while the scripts should work for anyone, you'll need to adjust the `static_data` file if you want to use it for yourself.
 
