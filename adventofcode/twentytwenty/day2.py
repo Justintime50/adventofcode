@@ -1,11 +1,17 @@
 import re
 
 
+def main():
+    valid_password_count_1, valid_password_count_2 = iterate_password_data()
+    print('Number of valid passwords part 1:', valid_password_count_1)
+    print('Number of valid passwords part 2:', valid_password_count_2)
+
+
 def iterate_password_data():
     with open('adventofcode/twentytwenty/static_data/day2.txt', 'r') as f:
         lines = f.readlines()
 
-    re_match = re.compile('(?P<min>[\d]+)-(?P<max>[\d]+) (?P<letter>[\w]+): (?P<password>.+)')
+    re_match = re.compile('(?P<min>\\d+)-(?P<max>\\d+) (?P<letter>\\w+): (?P<password>.+)')
     valid_password_count_1 = 0
     valid_password_count_2 = 0
 
@@ -20,8 +26,7 @@ def iterate_password_data():
         if check_valid_password_2(minimum, maximum, letter, password):
             valid_password_count_2 += 1
 
-    print('Number of valid passwords part 1:', valid_password_count_1)
-    print('Number of valid passwords part 2:', valid_password_count_2)
+    return valid_password_count_1, valid_password_count_2
 
 
 def check_valid_password_1(minimum, maximum, letter, password):
@@ -52,4 +57,4 @@ def check_valid_password_2(minimum, maximum, letter, password):
 
 
 if __name__ == '__main__':
-    iterate_password_data()
+    main()

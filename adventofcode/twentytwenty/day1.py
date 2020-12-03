@@ -19,9 +19,9 @@ def sum_two_numbers():
             if sum_total == num_to_equal:
                 print(f'Part 1 Addition: {formatted_num_1} + {formatted_num_2} = {sum_total}')
                 print(
-                    f'Part 1 Multiplication: {formatted_num_1} * {formatted_num_2} = {formatted_num_1 * formatted_num_2}'
+                    f'Part 1 Multiplication: {formatted_num_1} * {formatted_num_2} = {formatted_num_1 * formatted_num_2}'  # noqa
                 )
-                return
+                return formatted_num_1, formatted_num_2
     print(f'No numbers sum together to equal {num_to_equal}')
 
 
@@ -46,9 +46,9 @@ def sum_three_numbers():
                 if sum_total == num_to_equal:
                     print(f'Part 2 Addition: {formatted_num_1} + {formatted_num_2} + {formatted_num_3} = {sum_total}')
                     print(
-                        f'Part 2 Multiplication: {formatted_num_1} * {formatted_num_2} * {formatted_num_3} = {formatted_num_1 * formatted_num_2 * formatted_num_3}'
+                        f'Part 2 Multiplication: {formatted_num_1} * {formatted_num_2} * {formatted_num_3} = {formatted_num_1 * formatted_num_2 * formatted_num_3}'  # noqa
                     )
-                    return
+                    return formatted_num_1, formatted_num_2, formatted_num_3
     print(f'No numbers sum together to equal {num_to_equal}')
 
 
