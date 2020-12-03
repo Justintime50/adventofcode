@@ -1,11 +1,11 @@
-# Advent of Code 2020
+# Advent of Code
 
 An Advent calendar of coding challenges. https://adventofcode.com/2020
 
-[![Build Status](https://travis-ci.com/Justintime50/adventofcode-2020.svg?branch=master)](https://travis-ci.com/Justintime50/adventofcode-2020)
-[![Licence](https://img.shields.io/github/license/justintime50/adventofcode-2020)](LICENSE)
+[![Build Status](https://travis-ci.com/Justintime50/adventofcode.svg?branch=main)](https://travis-ci.com/Justintime50/adventofcode)
+[![Licence](https://img.shields.io/github/license/justintime50/adventofcode)](LICENSE)
 
-> The real challenge is writing good code - quickly without hating how it turns out.
+> The real challenge is writing good code - quickly, without hating how it turns out.
 
 **Note:** Everyone's data will be different, while the scripts should work for anyone, you'll need to adjust the `static_data` file if you want to use it for yourself.
 
@@ -26,7 +26,7 @@ Each day you'll get a prompt containing two parts. Find the [promps here](prompt
 Run a script for a particular day, the output should be the answer you can plug into the Advent of Code daily challenge.
 
 ```bash
-venv/bin/python adventofcode/day1.py
+venv/bin/python adventofcode/twentytwenty/day1.py
 ```
 
 ## Development
@@ -42,9 +42,10 @@ make test
 make coverage
 ```
 
-## Coworkers to Keep an Eye On
+## Friends to Keep an Eye On
 
-Advent of Code has the nice side effect of being a competition. Here are a few coworkers to keep an eye on, certainly some things to learn:
+Advent of Code has the nice side effect of being a competition. Here are a few friends to keep an eye on, certainly some things by studying different approaches to the same problem:
 
 * https://github.com/jasonbot/2020-advent-of-code
 * https://github.com/wulymammoth/advent_of_code_2020
+* https://github.com/gagelarsen/adventofcode
