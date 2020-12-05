@@ -11,7 +11,7 @@ def iterate_password_data():
     with open('adventofcode/twentytwenty/static_data/day2.txt', 'r') as f:
         lines = f.readlines()
 
-    re_match = re.compile('(?P<min>\\d+)-(?P<max>\\d+) (?P<letter>\\w+): (?P<password>.+)')
+    re_match = re.compile(r'(?P<min>\d+)-(?P<max>\d+) (?P<letter>\w+): (?P<password>.+)')
     valid_password_count_1 = 0
     valid_password_count_2 = 0
 
