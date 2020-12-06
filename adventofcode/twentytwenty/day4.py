@@ -1,7 +1,7 @@
 import re
 
 
-# TODO: Clean up code and practice DRY, create reusable functions for rules that repeate
+# TODO: Clean up code and practice DRY, create reusable functions for rules that repeat
 
 
 def main():
