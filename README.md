@@ -8,7 +8,7 @@ An advent calendar of coding challenges. https://adventofcode.com/2020
 [![Coverage Status](https://coveralls.io/repos/github/Justintime50/adventofcode/badge.svg?branch=main)](https://coveralls.io/github/Justintime50/adventofcode?branch=main)
 [![Licence](https://img.shields.io/github/license/justintime50/adventofcode)](LICENSE)
 
-<img src="assets/showcase.png" alt="Showcase">
+<img src="https://raw.githubusercontent.com/justintime50/assets/main/src/adventofcode/showcase.png" alt="Showcase">
 
 </div>
 
@@ -58,7 +58,3 @@ Advent of Code has the nice side effect of being a competition. Here are a few f
 * [gagelarsen](https://github.com/gagelarsen/adventofcode)
 * [kgraves](https://github.com/kgraves/advent_of_code)
 * [jontsai](https://github.com/hacktoolkit/code_challenges/tree/master/adventofcode/2020)
-
-## Attribution
-
-- Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
