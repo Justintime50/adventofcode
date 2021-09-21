@@ -6,7 +6,6 @@ with open('README.md', 'r') as fh:
 DEV_REQUIREMENTS = [
     'coveralls == 3.*',
     'flake8',
-    'mock == 4.*',
     'pytest == 6.*',
     'pytest-cov == 2.*',
 ]
@@ -27,12 +26,12 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     extras_require={
-        'dev': DEV_REQUIREMENTS
+        'dev': DEV_REQUIREMENTS,
     },
     entry_points={
         'console_scripts': [
-            'adventofcode=github_archive.cli:main'
-        ]
+            'adventofcode=github_archive.cli:main',
+        ],
     },
-    python_requires='>=3.6',
+    python_requires='>=3.7',
 )
