@@ -1,6 +1,5 @@
 import os
 
-
 RISE = int(os.getenv('RISE', 1))
 RUN = int(os.getenv('RUN', 1))
 

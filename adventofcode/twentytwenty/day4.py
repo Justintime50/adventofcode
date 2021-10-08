@@ -1,6 +1,5 @@
 import re
 
-
 # TODO: Clean up code and practice DRY, create reusable functions for rules that repeat
 
 
@@ -103,8 +102,7 @@ def validate_passport_field_data(passport):
 
 
 def format_passport_data():
-    """Helper function to format passport data
-    """
+    """Helper function to format passport data"""
     with open('adventofcode/twentytwenty/static_data/day4.txt', 'r') as f:
         lines = f.read()
 

@@ -1,6 +1,4 @@
-from adventofcode.twentytwenty.day5 import (
-    find_seat_numbers,
-)
+from adventofcode.twentytwenty.day5 import find_seat_numbers
 
 
 def test_find_seat_numbers():

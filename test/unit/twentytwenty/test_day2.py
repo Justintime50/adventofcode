@@ -1,6 +1,4 @@
-from adventofcode.twentytwenty.day2 import (
-    iterate_password_data,
-)
+from adventofcode.twentytwenty.day2 import iterate_password_data
 
 
 def test_iterate_password_data():

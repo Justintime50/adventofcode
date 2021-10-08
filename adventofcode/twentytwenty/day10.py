@@ -1,6 +1,5 @@
 import os
 
-
 STARTING_JOLTS = int(os.getenv('STARTING_JOLTS', 0))
 
 
@@ -13,16 +12,14 @@ def main():
 
 
 def get_data():
-    """Get the data
-    """
+    """Get the data"""
     with open('adventofcode/twentytwenty/static_data/day10.txt', 'r') as f:
         lines = f.readlines()
     return lines
 
 
 def get_joltage(data):
-    """Get the joltage rating of your device (3 more than the highest number)
-    """
+    """Get the joltage rating of your device (3 more than the highest number)"""
     joltage = []
     for item in data:
         joltage.append(int(item.replace('\n', '')))
@@ -32,13 +29,12 @@ def get_joltage(data):
 
 
 def check_each_adapter(joltage_list):
-    """Iterate through each adapter and check it against the joltage list
-    """
+    """Iterate through each adapter and check it against the joltage list"""
     jolts_to_check = STARTING_JOLTS
     one_jolt_difference = 0
     three_jolt_difference = 0
     for jolt in joltage_list:
-        difference = jolt - joltage_list[jolts_to_check-1]
+        difference = jolt - joltage_list[jolts_to_check - 1]
         # print('difference:', difference)
         jolts_to_check += 1
         if difference == 1:

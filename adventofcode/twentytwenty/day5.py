@@ -30,25 +30,28 @@ def find_seat_numbers(boarding_passes):
         # Check row
         for character in region_string:
             if character.upper() == 'F':
-                row = row[:len(row)//2]
+                row = row[: len(row) // 2]
             elif character.upper() == 'B':
-                row = row[len(row)//2:]
+                row = row[len(row) // 2 :]
 
             # Check column
             if len(row) == 1:
                 for character in row_string:
                     if character.upper() == 'L':
-                        column = column[:len(column)//2]
+                        column = column[: len(column) // 2]
                     elif character.upper() == 'R':
-                        column = column[len(column)//2:]
+                        column = column[len(column) // 2 :]
                 # print('Row:', row, 'Column:', column)
                 seat_id = (row[0] * 8) + column[0]
                 seat_ids.append(seat_id)
 
     max_id = max(seat_ids)
     sorted_seat_ids = sorted(seat_ids)
-    missing_ids = [missing_int for missing_int in range(sorted_seat_ids[0],
-                                                        sorted_seat_ids[-1]+1) if missing_int not in sorted_seat_ids]
+    missing_ids = [
+        missing_int
+        for missing_int in range(sorted_seat_ids[0], sorted_seat_ids[-1] + 1)
+        if missing_int not in sorted_seat_ids
+    ]
 
     return max_id, missing_ids
 

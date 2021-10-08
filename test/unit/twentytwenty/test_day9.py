@@ -1,6 +1,6 @@
 from adventofcode.twentytwenty.day9 import (
     find_cypher_weakness_part_1,
-    find_cypher_weakness_part_2
+    find_cypher_weakness_part_2,
 )
 
 

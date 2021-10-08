@@ -1,8 +1,4 @@
-from adventofcode.twentytwenty.day10 import (
-    get_data,
-    get_joltage,
-    check_each_adapter,
-)
+from adventofcode.twentytwenty.day10 import check_each_adapter, get_data, get_joltage
 
 
 def test_check_each_adapter():

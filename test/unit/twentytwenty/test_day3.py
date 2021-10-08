@@ -1,7 +1,4 @@
-from adventofcode.twentytwenty.day3 import (
-    sled_down_hill,
-    part_2_helper
-)
+from adventofcode.twentytwenty.day3 import part_2_helper, sled_down_hill
 
 
 def test_sled_down_hill():

@@ -1,7 +1,4 @@
-from adventofcode.twentytwenty.day13 import (
-    get_data,
-    iterate_bus_ids,
-)
+from adventofcode.twentytwenty.day13 import get_data, iterate_bus_ids
 
 
 def test_iterate_bus_ids():

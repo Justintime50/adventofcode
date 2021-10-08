@@ -1,6 +1,4 @@
-from adventofcode.twentytwenty.day7 import (
-    get_num_bags,
-)
+from adventofcode.twentytwenty.day7 import get_num_bags
 
 
 def test_get_num_bags():

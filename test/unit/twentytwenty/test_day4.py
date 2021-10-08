@@ -1,7 +1,4 @@
-from adventofcode.twentytwenty.day4 import (
-    format_passport_data,
-    check_valid_passports,
-)
+from adventofcode.twentytwenty.day4 import check_valid_passports, format_passport_data
 
 
 def test_check_valid_passports():

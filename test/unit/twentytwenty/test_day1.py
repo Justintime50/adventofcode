@@ -1,7 +1,4 @@
-from adventofcode.twentytwenty.day1 import (
-    sum_two_numbers,
-    sum_three_numbers
-)
+from adventofcode.twentytwenty.day1 import sum_three_numbers, sum_two_numbers
 
 
 def test_sum_two_numbers():

@@ -21,9 +21,6 @@ An advent calendar of coding challenges. https://adventofcode.com/2020
 ```bash
 # Install locally
 make install
-
-# Get Makefile help
-make help
 ```
 
 ## Usage
@@ -39,14 +36,8 @@ venv/bin/python adventofcode/twentytwenty/day1.py
 ## Development
 
 ```bash
-# Lint the project
-make lint
-
-# Run tests
-make test
-
-# Run test coverage
-make coverage
+# Get a comprehensive list of development tools
+make help
 ```
 
 ## Friends to Keep an Eye On

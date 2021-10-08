@@ -50,8 +50,12 @@ def check_valid_password_2(minimum, maximum, letter, password):
     Only one occurence of the letter is acceptable (an "a")
     at both 1 and 3 won't work.
     """
-    if (password[minimum-1] == letter and password[maximum-1] != letter
-            or password[maximum-1] == letter and password[minimum-1] != letter):
+    if (
+        password[minimum - 1] == letter
+        and password[maximum - 1] != letter
+        or password[maximum - 1] == letter
+        and password[minimum - 1] != letter
+    ):
         # print(minimum, maximum, letter, password)
         return True
 

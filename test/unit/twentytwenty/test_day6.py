@@ -1,6 +1,4 @@
-from adventofcode.twentytwenty.day6 import (
-    sum_group_answers,
-)
+from adventofcode.twentytwenty.day6 import sum_group_answers
 
 
 def test_sum_group_answers():

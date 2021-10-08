@@ -1,6 +1,5 @@
-import re
 import os
-
+import re
 
 BAG_TYPE = os.getenv('BAG_TYPE', 'shiny gold')
 
@@ -44,8 +43,8 @@ def run_recursion(bags, data, rules, total):
                 #     if bag == rule[0]:
                 #         # print(item)
                 #         total += int(item[1]) * int(rule[1])  # TOO HIGH
-                    # Try to reverse the recursion. Instead of how many bags can fit a BAG_TYPE in them,
-                    # how many bags can fit inside a BAG_TYPE
+                # Try to reverse the recursion. Instead of how many bags can fit a BAG_TYPE in them,
+                # how many bags can fit inside a BAG_TYPE
     # print(set(bags), len(set(bags)))
     if BAG_TYPE in bags:
         bags.remove(BAG_TYPE)  # We remove the bag in question because it cannot contain itself
@@ -76,8 +75,15 @@ def format_data(data):
         if 'no other bags' in bag_content:
             continue
         else:
-            bags.append([bag_type, [[re.sub(r'bags?$', '', content).strip().lower()[2:], content[:2].strip()]
-                                    for content in bag_content.split(',')]])
+            bags.append(
+                [
+                    bag_type,
+                    [
+                        [re.sub(r'bags?$', '', content).strip().lower()[2:], content[:2].strip()]
+                        for content in bag_content.split(',')
+                    ],
+                ]
+            )
             rule = re.search(fr'\d+ {BAG_TYPE}', bag_data)
             if rule:
                 rules.append([bag_type, rule.group()[:1].strip()])

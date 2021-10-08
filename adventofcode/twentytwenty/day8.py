@@ -3,8 +3,7 @@ def main():
 
 
 def calculate_num():
-    """Calculate the answer
-    """
+    """Calculate the answer"""
     total = 0
     lines_run = []
     total = run_recursion(0, lines_run, total)
@@ -13,8 +12,7 @@ def calculate_num():
 
 
 def run_recursion(index, lines_run, total):
-    """Recursively iterate through the data to sum the accumulator value
-    """
+    """Recursively iterate through the data to sum the accumulator value"""
     action, direction, number = format_data()[index]
     index = int(index)
 
@@ -26,7 +24,7 @@ def run_recursion(index, lines_run, total):
 
     if action == 'nop':
         lines_run.append(index)
-        return run_recursion(index+1, lines_run, total)
+        return run_recursion(index + 1, lines_run, total)
     elif action == 'acc':
         if direction == '+':
             total += number
@@ -46,8 +44,7 @@ def run_recursion(index, lines_run, total):
 
 
 def format_data():
-    """Format the data into a usable structure
-    """
+    """Format the data into a usable structure"""
     with open('adventofcode/twentytwenty/static_data/day8.txt', 'r') as f:
         lines = f.readlines()
 

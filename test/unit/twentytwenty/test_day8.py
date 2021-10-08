@@ -1,6 +1,4 @@
-from adventofcode.twentytwenty.day8 import (
-    calculate_num,
-)
+from adventofcode.twentytwenty.day8 import calculate_num
 
 
 def test_calculate_num():
