@@ -17,7 +17,7 @@ def sum_group_answers():
     group answered the same question.
     (eg: [a, b], [a, c], [d, a] - the only answer counted is a)
     """
-    with open('adventofcode/twentytwenty/static_data/day6.txt', 'r') as f:
+    with open('adventofcode/input_data/twentytwenty/day6.txt', 'r') as f:
         lines = f.read()
 
     total_sum_any_answer = 0

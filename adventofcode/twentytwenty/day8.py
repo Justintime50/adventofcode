@@ -45,7 +45,7 @@ def run_recursion(index, lines_run, total):
 
 def format_data():
     """Format the data into a usable structure"""
-    with open('adventofcode/twentytwenty/static_data/day8.txt', 'r') as f:
+    with open('adventofcode/input_data/twentytwenty/day8.txt', 'r') as f:
         lines = f.readlines()
 
     data = []

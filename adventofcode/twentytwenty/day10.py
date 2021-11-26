@@ -13,7 +13,7 @@ def main():
 
 def get_data():
     """Get the data"""
-    with open('adventofcode/twentytwenty/static_data/day10.txt', 'r') as f:
+    with open('adventofcode/input_data/twentytwenty/day10.txt', 'r') as f:
         lines = f.readlines()
     return lines
 

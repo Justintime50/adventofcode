@@ -30,10 +30,5 @@ setuptools.setup(
     extras_require={
         'dev': DEV_REQUIREMENTS,
     },
-    entry_points={
-        'console_scripts': [
-            'adventofcode=github_archive.cli:main',
-        ],
-    },
-    python_requires='>=3.7',
+    python_requires='>=3.7, <4',
 )

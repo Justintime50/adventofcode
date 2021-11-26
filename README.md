@@ -14,7 +14,7 @@ An advent calendar of coding challenges. https://adventofcode.com/2020
 
 > The real challenge is writing good code - quickly, without hating how it turns out.
 
-**Note:** Everyone's data will be different, while the scripts should work for anyone, you'll need to adjust the `static_data` content of each day if you want to use it for yourself.
+**NOTE:** Everyone's data will be different, while the scripts should work for anyone, you'll need to adjust the `input_data` content of each day if you want to use it for yourself.
 
 ## Install
 

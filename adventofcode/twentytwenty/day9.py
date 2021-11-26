@@ -1,5 +1,5 @@
 def main():
-    with open('adventofcode/twentytwenty/static_data/day9.txt', 'r') as f:
+    with open('adventofcode/input_data/twentytwenty/day9.txt', 'r') as f:
         lines = f.read()
     output_part_1 = find_cypher_weakness_part_1(lines.split('\n'))
     output_part_2 = find_cypher_weakness_part_2(lines.split('\n'), int(output_part_1))

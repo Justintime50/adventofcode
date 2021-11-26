@@ -8,7 +8,7 @@ def sum_two_numbers():
     in pairs of num + num until you find two that
     equal 2020.
     """
-    with open('adventofcode/twentytwenty/static_data/day1.txt', 'r') as f:
+    with open('adventofcode/input_data/twentytwenty/day1.txt', 'r') as f:
         lines = f.readlines()
     num_to_equal = 2020
     for num_1 in lines:
@@ -33,9 +33,11 @@ def sum_three_numbers():
     in sets of num + num + num until you find two that
     equal 2020.
     """
-    with open('adventofcode/twentytwenty/static_data/day1.txt', 'r') as f:
+    with open('adventofcode/input_data/twentytwenty/day1.txt', 'r') as f:
         lines = f.readlines()
     num_to_equal = 2020
+
+    # TODO: This is terrible, there's a better way than a triple nested for loop (this runs very slow)
     for num_1 in lines:
         for num_2 in lines:
             for num_3 in lines:

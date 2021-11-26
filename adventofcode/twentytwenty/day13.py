@@ -6,7 +6,7 @@ def main():
 
 def get_data():
     """Get the data"""
-    with open('adventofcode/twentytwenty/static_data/day13.txt', 'r') as f:
+    with open('adventofcode/input_data/twentytwenty/day13.txt', 'r') as f:
         lines = f.read().split('\n')
     return int(lines[:1][0]), lines[1:2]
 

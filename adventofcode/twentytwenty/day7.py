@@ -14,7 +14,7 @@ def get_num_bags():
     """Gets the number of bags that can contain at least one bag
     your specify
     """
-    with open('adventofcode/twentytwenty/static_data/day7.txt', 'r') as f:
+    with open('adventofcode/input_data/twentytwenty/day7.txt', 'r') as f:
         lines = f.readlines()
 
     rules, bags = format_data(lines)

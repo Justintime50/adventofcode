@@ -103,7 +103,7 @@ def validate_passport_field_data(passport):
 
 def format_passport_data():
     """Helper function to format passport data"""
-    with open('adventofcode/twentytwenty/static_data/day4.txt', 'r') as f:
+    with open('adventofcode/input_data/twentytwenty/day4.txt', 'r') as f:
         lines = f.read()
 
     passports = lines.split('\n\n')

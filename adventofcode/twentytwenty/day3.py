@@ -32,7 +32,7 @@ def sled_down_hill(rise, run):
     """
     if rise <= 0 or run <= 0:
         raise ValueError('Rise and Run must be greater than 0')
-    with open('adventofcode/twentytwenty/static_data/day3.txt', 'r') as f:
+    with open('adventofcode/input_data/twentytwenty/day3.txt', 'r') as f:
         lines = f.readlines()
 
     trees_hit = 0

@@ -1,5 +1,5 @@
 def main():
-    with open('adventofcode/twentytwenty/static_data/day5.txt', 'r') as f:
+    with open('adventofcode/input_data/twentytwenty/day5.txt', 'r') as f:
         lines = f.readlines()
     max_id, missing_ids = find_seat_numbers(lines)
     print('Max ID:', max_id)

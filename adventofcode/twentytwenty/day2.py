@@ -8,7 +8,7 @@ def main():
 
 
 def iterate_password_data():
-    with open('adventofcode/twentytwenty/static_data/day2.txt', 'r') as f:
+    with open('adventofcode/input_data/twentytwenty/day2.txt', 'r') as f:
         lines = f.readlines()
 
     re_match = re.compile(r'(?P<min>\d+)-(?P<max>\d+) (?P<letter>\w+): (?P<password>.+)')
