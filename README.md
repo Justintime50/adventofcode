@@ -2,7 +2,7 @@
 
 # Advent of Code
 
-An advent calendar of coding challenges. https://adventofcode.com/2020
+An advent calendar of coding challenges. https://adventofcode.com
 
 [![Build Status](https://github.com/Justintime50/adventofcode/workflows/build/badge.svg)](https://github.com/Justintime50/adventofcode/actions)
 [![Coverage Status](https://coveralls.io/repos/github/Justintime50/adventofcode/badge.svg?branch=main)](https://coveralls.io/github/Justintime50/adventofcode?branch=main)
