@@ -1,5 +1,5 @@
 def main():
-    data = open_file()
+    data = open_input()
     gamma_rate = calculate_answer1_rating(data, 'gamma')
     epsilon_rate = calculate_answer1_rating(data, 'epsilon')
     answer_1 = gamma_rate * epsilon_rate
@@ -13,7 +13,7 @@ def main():
     return answer_1, answer_2
 
 
-def open_file():
+def open_input():
     """Open the input_data file for the day."""
     with open('adventofcode/_2021/day3/input.txt', 'r') as f:
         lines = f.read()

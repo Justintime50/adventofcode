@@ -1,5 +1,5 @@
 def main():
-    data = open_file()
+    data = open_input()
     answer_1 = calculate_position(data)
     answer_2 = calculate_position_with_aim(data)
 
@@ -8,7 +8,7 @@ def main():
     return answer_1, answer_2
 
 
-def open_file():
+def open_input():
     with open('adventofcode/_2021/day2/input.txt', 'r') as f:
         lines = f.read()
 

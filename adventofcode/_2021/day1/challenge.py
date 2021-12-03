@@ -1,5 +1,5 @@
 def main():
-    data = open_file()
+    data = open_input()
     answer_1 = calculate_depth_increase(data, chunk_size=1)
     answer_2 = calculate_depth_increase(data, chunk_size=3)
 
@@ -8,7 +8,7 @@ def main():
     return answer_1, answer_2
 
 
-def open_file():
+def open_input():
     with open('adventofcode/_2021/day1/input.txt', 'r') as f:
         lines = f.read()
 
