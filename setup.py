@@ -12,6 +12,8 @@ DEV_REQUIREMENTS = [
     'pytest-cov == 2.*',
 ]
 
+# NOTE: This repository is not intended to be distributed as a package and as such is not setup as one correctly
+
 setuptools.setup(
     name='adventofcode',
     version='0.1.0',

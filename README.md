@@ -14,7 +14,7 @@ An advent calendar of coding challenges. https://adventofcode.com
 
 > The real challenge is writing good code - quickly, without hating how it turns out.
 
-**NOTE:** Everyone's data will be different, while the scripts should work for anyone, you'll need to adjust the `input_data` content of each day if you want to use it for yourself.
+**NOTE:** Everyone's data will be different, while the scripts should work for anyone, you'll need to adjust the `input.txt` file content of each day if you want to use it for yourself. Know that my input files always have an extra blank line at the end from my editor automatically adding it on save and so in my solutions I discard the last line of the input data.
 
 ## Install
 
@@ -25,12 +25,23 @@ make install
 
 ## Usage
 
-Each day you'll get a prompt containing two parts. Find the [promps here](prompts).
+### Setting Up
 
-Run a script for a particular day, the output should be the answer you can plug into the Advent of Code daily challenge.
+You can run a simple script to setup a new day's folder/file structure:
 
 ```bash
-venv/bin/python adventofcode/twentytwenty/day1.py
+# 1st param is the year, 2nd param is the day
+./setup_day.sh 2021 day4
+```
+
+### Running Challenges
+
+Each day you'll get a prompt containing two parts. You get more points the more parts you answer correctly and the faster you do so.
+
+Run a script for a particular day, the output should be the answer(s) you can plug into the Advent of Code daily challenge.
+
+```bash
+venv/bin/python adventofcode/_2021/day1/challenge.py
 ```
 
 ## Development
