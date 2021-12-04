@@ -1,5 +1,8 @@
+from adventofcode.utils import open_input
+
+
 def main():
-    data = open_input()
+    data = open_input('adventofcode/_2021/day2/input.txt')
     answer_1 = calculate_position(data)
     answer_2 = calculate_position_with_aim(data)
 
@@ -8,20 +11,13 @@ def main():
     return answer_1, answer_2
 
 
-def open_input():
-    with open('adventofcode/_2021/day2/input.txt', 'r') as f:
-        lines = f.read()
-
-        return lines.split('\n')
-
-
 def calculate_position(data: list[str]) -> int:
     """Calculate the submarine's position based on the `horizontal_position`
     and it's `depth`, multiplying those numbers together to get the answer.
     """
     horizontal_position = depth = 0
 
-    for instruction in data[:-1]:
+    for instruction in data:
         split_data = instruction.split()
         action = split_data[0]
         measurement = int(split_data[1])
@@ -45,7 +41,7 @@ def calculate_position_with_aim(data: list[str]) -> int:
     """
     horizontal_position = depth = aim = 0
 
-    for instruction in data[:-1]:
+    for instruction in data:
         split_data = instruction.split()
         action = split_data[0]
         measurement = int(split_data[1])

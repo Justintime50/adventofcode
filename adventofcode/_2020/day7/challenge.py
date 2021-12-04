@@ -1,24 +1,19 @@
 import os
 import re
 
+from adventofcode.utils import open_input
+
 BAG_TYPE = os.getenv('BAG_TYPE', 'shiny gold')
 
 
 def main():
-    data = open_input()
+    data = open_input('adventofcode/_2020/day7/input.txt')
     answer_1 = get_num_bags(data)
 
     print('Bag total:', answer_1)
     # print('Part 2:', answer_2)
 
     return answer_1  # TODO: Return `answer_2` here
-
-
-def open_input():
-    with open('adventofcode/_2020/day7/input.txt', 'r') as f:
-        lines = f.readlines()
-
-    return lines
 
 
 def get_num_bags(data):

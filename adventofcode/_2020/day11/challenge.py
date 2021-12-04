@@ -9,22 +9,15 @@ Recursively run this until no seats change state
 
 QUESTION: How many seats end up occupied?
 """
+from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input()
+    data = open_input('adventofcode/_2020/day11/input.txt')
     generate_seat_map(data)
 
     # for line in data:
     #     print(line)
-
-
-def open_input():
-    with open('adventofcode/_2020/day11/input.txt', 'r') as filename:
-        data = filename.read()
-        split_data = data.split('\n')
-
-    return split_data
 
 
 class Seat:

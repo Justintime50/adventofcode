@@ -1,11 +1,13 @@
 import os
 
+from adventofcode.utils import open_input
+
 RISE = int(os.getenv('RISE', 1))
 RUN = int(os.getenv('RUN', 3))
 
 
 def main():
-    data = open_input()
+    data = open_input('adventofcode/_2020/day3/input.txt')
     answer_1 = sled_down_hill(data, RISE, RUN)
     answer_2 = part_2_helper(data)
 
@@ -13,13 +15,6 @@ def main():
     print(f'Multiplied trees hit for part 2: {answer_2}')
 
     return answer_1, answer_2
-
-
-def open_input():
-    with open('adventofcode/_2020/day3/input.txt', 'r') as f:
-        lines = f.readlines()
-
-    return lines
 
 
 def sled_down_hill(data, rise, run):

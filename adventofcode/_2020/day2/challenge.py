@@ -1,21 +1,16 @@
 import re
 
+from adventofcode.utils import open_input
+
 
 def main():
-    data = open_input()
+    data = open_input('adventofcode/_2020/day2/input.txt')
     answer_1, answer_2 = iterate_password_data(data)
 
     print('Number of valid passwords part 1:', answer_1)
     print('Number of valid passwords part 2:', answer_2)
 
     return answer_1, answer_2
-
-
-def open_input():
-    with open('adventofcode/_2020/day2/input.txt', 'r') as f:
-        lines = f.readlines()
-
-    return lines
 
 
 def iterate_password_data(data):

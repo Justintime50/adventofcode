@@ -1,10 +1,12 @@
 import re
 
+from adventofcode.utils import open_input_literal
+
 # TODO: Clean up code and practice DRY, create reusable functions for rules that repeat
 
 
 def main():
-    data = open_input()
+    data = open_input_literal('adventofcode/_2020/day4/input.txt')
     passports = format_passport_data(data)
     answer_1, answer_2 = check_valid_passports(passports)
 
@@ -12,13 +14,6 @@ def main():
     print('Number of valid passports part 2:', answer_2)
 
     return answer_1, answer_2
-
-
-def open_input():
-    with open('adventofcode/_2020/day4/input.txt', 'r') as f:
-        lines = f.read()
-
-    return lines
 
 
 def check_valid_passports(passports):

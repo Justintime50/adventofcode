@@ -1,5 +1,8 @@
+from adventofcode.utils import open_input
+
+
 def main():
-    data = open_input()
+    data = open_input('adventofcode/_2021/day3/input.txt')
     gamma_rate = calculate_answer1_rating(data, 'gamma')
     epsilon_rate = calculate_answer1_rating(data, 'epsilon')
     answer_1 = gamma_rate * epsilon_rate
@@ -13,20 +16,11 @@ def main():
     return answer_1, answer_2
 
 
-def open_input():
-    """Open the input_data file for the day."""
-    with open('adventofcode/_2021/day3/input.txt', 'r') as f:
-        lines = f.read()
-
-        # TODO: Ensure you skip the last element which is often a blank newline.
-        return lines.split('\n')
-
-
 def calculate_answer1_rating(data: list[str], context: str) -> int:
     """Calculate the gamma/epsilon rating by taking the most common bit in each position and converting to decimal."""
     most_common_bit_binary_number = ''
 
-    transposed_lists = list(map(list, zip(*data[:-1])))
+    transposed_lists = list(map(list, zip(*data)))
 
     for bit_group in transposed_lists:
         ones = bit_group.count('1')
@@ -46,11 +40,11 @@ def calculate_answer1_rating(data: list[str], context: str) -> int:
 
 def calculate_answer2_rating(data: list[str], context: str) -> int:
     """Calculate the oxygen/co2 rating by taking the most common bit in each position and converting to decimal."""
-    transposed_lists = list(map(list, zip(*data[:-1])))
+    transposed_lists = list(map(list, zip(*data)))
 
     # Go until we get our answer
     index_removal_counter = 0
-    data = data[:-1]
+    data = data[:-1]  # Can't remember why this was necessary but it is
     while len(data) > 1:
         most_common_int_list = []
 

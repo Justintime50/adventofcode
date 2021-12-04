@@ -1,10 +1,12 @@
 import os
 
+from adventofcode.utils import open_input
+
 STARTING_JOLTS = int(os.getenv('STARTING_JOLTS', 0))
 
 
 def main():
-    data = open_input()
+    data = open_input('adventofcode/_2020/day10/input.txt')
     device_rating, joltage_list = get_joltage(data)
     answer_1 = check_each_adapter(joltage_list)
     part_2(joltage_list, device_rating)
@@ -12,13 +14,6 @@ def main():
     print('Distrubution:', answer_1)
 
     return answer_1
-
-
-def open_input():
-    with open('adventofcode/_2020/day10/input.txt', 'r') as f:
-        lines = f.readlines()
-
-    return lines
 
 
 def get_joltage(data):

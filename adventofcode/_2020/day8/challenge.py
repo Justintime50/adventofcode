@@ -1,14 +1,10 @@
+from adventofcode.utils import open_input
+
+
 def main():
     answer_1 = calculate_num()
 
     return answer_1
-
-
-def open_input():
-    with open('adventofcode/_2020/day8/input.txt', 'r') as f:
-        lines = f.readlines()
-
-    return lines
 
 
 def calculate_num():
@@ -54,7 +50,7 @@ def run_recursion(index, lines_run, total):
 
 def format_data():
     """Format the data into a usable structure"""
-    data = open_input()
+    data = open_input('adventofcode/_2020/day8/input.txt')
     formatted_data = []
 
     for index, line in enumerate(data):

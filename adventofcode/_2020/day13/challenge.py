@@ -1,17 +1,15 @@
+from adventofcode.utils import open_input
+
+
 def main():
-    timestamp, bus_ids = get_input()
+    data = open_input('adventofcode/_2020/day13/input.txt')
+    timestamp = int(data[:1][0])
+    bus_ids = data[1:2]
     answer_1 = iterate_bus_ids(timestamp, bus_ids)
 
     print('Answer:', answer_1)
 
     return answer_1
-
-
-def get_input():
-    with open('adventofcode/_2020/day13/input.txt', 'r') as f:
-        lines = f.read().split('\n')
-
-    return int(lines[:1][0]), lines[1:2]
 
 
 def iterate_bus_ids(timestamp, bus_ids):

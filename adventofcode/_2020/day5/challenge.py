@@ -1,18 +1,14 @@
+from adventofcode.utils import open_input
+
+
 def main():
-    data = open_input()
+    data = open_input('adventofcode/_2020/day5/input.txt')
     answer_1, answer_2 = find_seat_numbers(data)
 
     print('Max ID:', answer_1)
     print('Missing IDs:', answer_2)
 
     return answer_1, answer_2
-
-
-def open_input():
-    with open('adventofcode/_2020/day5/input.txt', 'r') as f:
-        lines = f.readlines()
-
-    return lines
 
 
 def find_seat_numbers(boarding_passes):

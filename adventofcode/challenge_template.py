@@ -1,6 +1,8 @@
-# flake8: noqa
+from adventofcode.utils import open_input
+
+
 def main():
-    data = open_input()
+    data = open_input('adventofcode/_2021/day0/input.txt')  # TODO: Change this string
     answer_1 = some_function(data)
     answer_2 = some_function(data)
 
@@ -9,10 +11,9 @@ def main():
     return answer_1, answer_2
 
 
-def open_input():
-    """Open the input_data file for the day."""
-    with open('adventofcode/_2021/day0/input.txt', 'r') as f:
-        lines = f.read()
+def some_function(data):
+    pass
 
-    # TODO: Ensure you skip the last element which is often a blank newline.
-    return lines.split('\n')
+
+if __name__ == '__main__':
+    main()

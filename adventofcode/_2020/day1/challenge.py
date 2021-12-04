@@ -1,19 +1,15 @@
+from adventofcode.utils import open_input
+
+
 # TODO: Have a single function that can take an argument for how many numbers to sum
 def main():
-    data = open_input()
+    data = open_input('adventofcode/_2020/day1/input.txt')
     answer_1 = sum_two_numbers(data)
     answer_2 = sum_three_numbers(data)
 
     print(answer_1, answer_2)
 
     return answer_1, answer_2
-
-
-def open_input():
-    with open('adventofcode/_2020/day1/input.txt', 'r') as f:
-        lines = f.readlines()
-
-    return lines
 
 
 def sum_two_numbers(data):

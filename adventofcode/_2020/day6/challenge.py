@@ -1,18 +1,14 @@
+from adventofcode.utils import open_input_literal
+
+
 def main():
-    data = open_input()
+    data = open_input_literal('adventofcode/_2020/day6/input.txt')
     answer_1, answer_2 = sum_group_answers(data)
 
     print('Total sum any answers:', answer_1)
     print('Total sum all answers:', answer_2)
 
     return answer_1, answer_2
-
-
-def open_input():
-    with open('adventofcode/_2020/day6/input.txt', 'r') as f:
-        lines = f.read()
-
-    return lines
 
 
 def sum_group_answers(data):

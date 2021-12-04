@@ -1,19 +1,15 @@
+from adventofcode.utils import open_input
+
+
 def main():
-    data = open_input()
-    answer_1 = find_cypher_weakness_part_1(data.split('\n'))
-    answer_2 = find_cypher_weakness_part_2(data.split('\n'), int(answer_1))
+    data = open_input('adventofcode/_2020/day9/input.txt')
+    answer_1 = find_cypher_weakness_part_1(data)
+    answer_2 = find_cypher_weakness_part_2(data, int(answer_1))
 
     print('Xmas Cypher Weakness part 1:', answer_1)
     print('Xmas Cypher Weakness part 2:', answer_2)
 
     return answer_1, answer_2
-
-
-def open_input():
-    with open('adventofcode/_2020/day9/input.txt', 'r') as f:
-        lines = f.read()
-
-    return lines
 
 
 def find_cypher_weakness_part_1(data):
@@ -34,7 +30,6 @@ def find_cypher_weakness_part_1(data):
         preamble.append(number)
 
     # Sum all pairs in preamble
-    del data[-1]  # Remove the empty one-liner at the end
     for number in data[25:]:
         sum_list = []
         for preamble_number_1 in preamble:
@@ -56,7 +51,6 @@ def find_cypher_weakness_part_2(data, invalid_number):
     """Finds the cypher weakness by finding a contiguous list of numbers
     that add up to the invalid number from part 1
     """
-    del data[-1]  # Remove the empty one-liner at the end
     for index, _ in enumerate(data):
         contiguous_list = []
         for number in data[index:]:
