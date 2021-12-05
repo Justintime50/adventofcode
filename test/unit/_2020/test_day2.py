@@ -1,7 +1,7 @@
 from adventofcode._2020.day2.challenge import main
 
 
-def test_challenge():
+def test_input():
     answer_1, answer_2 = main()
 
     assert answer_1 == 638

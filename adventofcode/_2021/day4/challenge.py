@@ -5,7 +5,6 @@ def main():
     data = open_input('adventofcode/_2021/day4/input.txt')
     winning_numbers, boards = build_boards(data)
     answer_1 = iterate_boards(winning_numbers, boards, winning_number_index=0, won_boards=[])
-    # answer_2 = some_function(data)
 
     print(answer_1)
 
@@ -68,7 +67,7 @@ def iterate_boards(
             new_boards.append(board)
 
     winning_number_index += 1
-    iterate_boards(winning_numbers, new_boards, winning_number_index, won_boards)
+    return iterate_boards(winning_numbers, new_boards, winning_number_index, won_boards)
 
 
 def mark_board(board: list[list[str]], winning_numbers: list, winning_number_index: int):
