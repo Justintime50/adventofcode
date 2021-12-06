@@ -53,10 +53,16 @@ make help
 
 ## Friends to Keep an Eye On
 
-Advent of Code has the nice side effect of being a competition. Here are a few friends to keep an eye on, certainly some things by studying different approaches to the same problem:
+Advent of Code has the nice side effect of being a competition. Here are a few friends and other noteworthy repos to keep an eye on. There are TONS of things one can learn by studying different approaches to the same problem.
 
+**Friends**
 * [jasonbot](https://github.com/jasonbot/2020-advent-of-code)
 * [wulymammoth](https://github.com/wulymammoth/advent_of_code_2020)
 * [gagelarsen](https://github.com/gagelarsen/adventofcode)
 * [kgraves](https://github.com/kgraves/advent_of_code)
 * [jontsai](https://github.com/hacktoolkit/code_challenges/tree/master/adventofcode/2020)
+* [jk0524](https://github.com/jk0524/adventofcode2021)
+* [LoganSimonsen](https://github.com/LoganSimonsen/advent-of-code)
+
+**Noteworthy Repos**
+* [jonathanpaulson](https://github.com/jonathanpaulson/AdventOfCode)
