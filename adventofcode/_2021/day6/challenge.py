@@ -1,47 +1,51 @@
+from collections import Counter, defaultdict
+
 from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2021/day6/sample.txt')
+    data = open_input('adventofcode/_2021/day6/input.txt')
     school = [int(fish) for fish in data[0].split(',')]
 
-    answer_1 = spawn_new_fish(school, end_sim_day_num=80)
+    answer_1 = spawn_new_fish(school, days_to_spawn_fish=80)
+    answer_2 = spawn_new_fish(school, days_to_spawn_fish=256)
 
-    # TODO: The problem quickly breaks down as `end_sim_day_num` increases.
-    # The current algorithm has a Big-O notation of O(n^2) but needs to get to
-    # O(n) or better probably, I burned through 55gb of memory usage and 15+ minutes
-    # with no answer for PART2 before giving up.
-    # answer_2 = spawn_new_fish(school, end_sim_day_num=256)
+    print(answer_1, answer_2)
 
-    print(answer_1)
-
-    return answer_1
+    return answer_1, answer_2
 
 
-def spawn_new_fish(school: list[int], end_sim_day_num: int = 80, day_counter: int = 0) -> int:
-    """Spawns a new fish when 1 fish in the "school" reaches a "timer" of 0.
+def spawn_new_fish(school: list[int], days_to_spawn_fish: int = 80) -> int:
+    """Spawns a new fish when a fish in the "school" reaches a "timer" of 0.
+    Fish will then reset their timer to 7 days from now (6 index), where new
+    fish will start their timer at 9 days (8 index).
 
     Returns the number of fish in the school once we reach 'x' days from now.
+
+    CREDIT: https://github.com/jonathanpaulson/AdventOfCode/blob/master/2021/6.py
+    I really do wish I was smart enough to come up with an answer for this one, but
+    my initial solution broke down once `days_to_spawn_fish` passed about `100` because
+    I was appending to a list exponentially which was O(n^2). In the end, I learned about
+    `Counter` and `defaultdict`, though I wrote the code below by only referencing the
+    above for hints on how to use the `collections` module.
     """
-    new_school = []
+    fish_by_timer = Counter(school)
 
-    for index, fish in enumerate(school):
-        if fish > 0:
-            school[index] -= 1
-        elif fish == 0:
-            school[index] = 6
-            new_school.append(8)
+    for day in range(days_to_spawn_fish):
+        new_school = defaultdict(int)
+        for key, value in fish_by_timer.items():
+            if key == 0:
+                new_school[6] += value
+                new_school[8] += value
+            else:
+                # If no new fish spawn, knock a day off the timer to new fish spawn for each fish with this timer
+                new_school[key - 1] += value
 
-    # print(school)
-    day_counter += 1
-    answer_1 = len(school)  # Assign initially to provide something to return before final return
+        fish_by_timer = new_school
 
-    while day_counter <= end_sim_day_num:
-        school = school + new_school
-        answer_1 = len(school)
-        return spawn_new_fish(school, end_sim_day_num, day_counter)
+    number_fish_in_school = sum(fish_by_timer.values())
 
-    return answer_1
+    return number_fish_in_school
 
 
 if __name__ == '__main__':

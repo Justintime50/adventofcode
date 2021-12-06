@@ -39,11 +39,9 @@ def generate_diagram(pairs: list[tuple], max_num_in_data: int):
     """Generate a diagram of the occurances of line overlaps based on coordinate pairs."""
     # We need to create the diagram and fill it with empty data ('.' = points where no line passed through)
     # before proceeding to fill it with real data
-    current_row = 0
     diagram = []
-    while current_row < max_num_in_data + 2:  # +2 here to deal with index offset
+    for entry in range(max_num_in_data):
         diagram.append(['.'] * (max_num_in_data + 2))  # +2 here to deal with index offset
-        current_row += 1
     # print(len(diagram[0]))
 
     # Iterate over each line of pair data and fill out the diagram
