@@ -1,7 +1,7 @@
 def open_input(input_path: str) -> list[str]:
     """Opens and sanitizes the `input.txt` file for the day reading in each line as an element of a list.
 
-    - Remove any extra lines at the end of the input files (if present, due to auto formatting)
+    - Remove any extra lines at the end of the input files (if present, due to auto-formatting)
     - Remove newline characters for individual element strings
     - Strip any whitespace
     """

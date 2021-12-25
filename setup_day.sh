@@ -8,6 +8,7 @@ main() {
 
     echo "Setting up $local_dir and $test_dir/test_$2.py..."
     mkdir -p "$local_dir"
+    mkdir -p "$test_dir"
     touch "$local_dir"/input.txt
     touch "$local_dir"/prompt.txt
     touch "$local_dir"/sample.txt
