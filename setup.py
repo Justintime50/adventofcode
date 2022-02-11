@@ -8,8 +8,8 @@ DEV_REQUIREMENTS = [
     'coveralls == 3.*',
     'flake8',
     'isort',
-    'pytest == 6.*',
-    'pytest-cov == 2.*',
+    'pytest == 7.*',
+    'pytest-cov == 3.*',
 ]
 
 # NOTE: This repository is not intended to be distributed as a package and as such is not setup as one correctly

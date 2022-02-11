@@ -1,6 +1,8 @@
 PYTHON_BINARY := python3
-VIRTUAL_BIN := venv/bin
+VIRTUAL_ENV := venv
+VIRTUAL_BIN := $(VIRTUAL_ENV)/bin
 PROJECT_NAME := adventofcode
+TEST_DIR := test
 
 ## help - Display help about make targets for this Makefile
 help:
@@ -16,7 +18,7 @@ coverage:
 
 ## clean - Remove the virtual environment and clear out .pyc files
 clean:
-	rm -rf ~/.venv/$(PROJECT_NAME)/ venv
+	rm -rf $(VIRTUAL_ENV)
 	find . -name '*.pyc' -delete
 	rm -rf dist
 	rm -rf build
@@ -24,11 +26,11 @@ clean:
 
 ## black - Runs the Black Python formatter against the project
 black:
-	$(VIRTUAL_BIN)/black $(PROJECT_NAME)/ test/
+	$(VIRTUAL_BIN)/black $(PROJECT_NAME)/ $(TEST_DIR)/
 
 ## black-check - Checks if the project is formatted correctly against the Black rules
 black-check:
-	$(VIRTUAL_BIN)/black $(PROJECT_NAME)/ test/ --check
+	$(VIRTUAL_BIN)/black $(PROJECT_NAME)/ $(TEST_DIR)/ --check
 
 ## format - Runs all formatting tools against the project
 format: black isort lint
@@ -38,21 +40,20 @@ format-check: black-check isort-check lint
 
 ## install - Install the project locally
 install:
-	$(PYTHON_BINARY) -m venv ~/.venv/$(PROJECT_NAME)/
-	ln -snf ~/.venv/$(PROJECT_NAME)/ venv
+	$(PYTHON_BINARY) -m venv $(VIRTUAL_ENV)
 	$(VIRTUAL_BIN)/pip install -e ."[dev]"
 
 ## isort - Sorts imports throughout the project
 isort:
-	$(VIRTUAL_BIN)/isort $(PROJECT_NAME)/ test/
+	$(VIRTUAL_BIN)/isort $(PROJECT_NAME)/ $(TEST_DIR)/
 
 ## isort-check - Checks that imports throughout the project are sorted correctly
 isort-check:
-	$(VIRTUAL_BIN)/isort $(PROJECT_NAME)/ test/ --check-only
+	$(VIRTUAL_BIN)/isort $(PROJECT_NAME)/ $(TEST_DIR)/ --check-only
 
 ## lint - Lint the project
 lint:
-	$(VIRTUAL_BIN)/flake8 $(PROJECT_NAME)/ test/
+	$(VIRTUAL_BIN)/flake8 $(PROJECT_NAME)/ $(TEST_DIR)/
 
 ## test - Test the project
 test:
