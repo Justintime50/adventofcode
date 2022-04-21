@@ -4,10 +4,10 @@ with open('README.md', 'r') as fh:
     long_description = fh.read()
 
 DEV_REQUIREMENTS = [
-    'black',
+    'black == 22.*',
     'coveralls == 3.*',
-    'flake8',
-    'isort',
+    'flake8 == 4.*',
+    'isort == 5.*',
     'pytest == 7.*',
     'pytest-cov == 3.*',
 ]
