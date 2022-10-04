@@ -1,5 +1,6 @@
 from adventofcode.utils import open_input
 
+
 # TODO: This solution can take upwards of 12 seconds to solve which is WAY too slow, there's a better way
 
 

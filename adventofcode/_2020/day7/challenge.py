@@ -3,6 +3,7 @@ import re
 
 from adventofcode.utils import open_input
 
+
 BAG_TYPE = os.getenv('BAG_TYPE', 'shiny gold')
 
 

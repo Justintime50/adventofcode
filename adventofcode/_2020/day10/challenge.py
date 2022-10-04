@@ -2,6 +2,7 @@ import os
 
 from adventofcode.utils import open_input
 
+
 STARTING_JOLTS = int(os.getenv('STARTING_JOLTS', 0))
 
 

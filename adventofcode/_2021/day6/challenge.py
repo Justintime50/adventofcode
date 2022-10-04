@@ -1,4 +1,7 @@
-from collections import Counter, defaultdict
+from collections import (
+    Counter,
+    defaultdict,
+)
 
 from adventofcode.utils import open_input
 
