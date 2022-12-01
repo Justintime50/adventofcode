@@ -2,7 +2,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2021/day0/sample.txt')  # TODO: Change this string
+    data = open_input('adventofcode/_2022/day0/sample.txt')  # TODO: Change this string
     answer_1 = get_answer(data)
     # answer_2 = get_answer(data)
 
