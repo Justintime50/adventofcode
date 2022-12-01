@@ -2,7 +2,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2022/day1/input.txt')  # TODO: Change this string
+    data = open_input('adventofcode/_2022/day1/input.txt')
     answer_1, answer_2 = get_answer(data)
 
     print(answer_1)
@@ -14,7 +14,7 @@ def main():
 def get_answer(data):
     """
     - Calories
-    - Split by newlines per elf
+    - Split by empty lines per elf
     Prompt Q1: which elf has the most calories
     Prompt Q2: Which 3 elfs have the most combined
     """
@@ -27,7 +27,7 @@ def get_answer(data):
         else:
             elf_calories += int(entry)
 
-    answer_1 = sorted(calories_per_elf, reverse=True)[0]
+    answer_1 = max(calories_per_elf)
     answer_2 = sum(sorted(calories_per_elf, reverse=True)[:3])
 
     return answer_1, answer_2
