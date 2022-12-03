@@ -1,4 +1,4 @@
-# from adventofcode._2022.day0.challenge import main
+# from adventofcode._2000.day0.challenge import main
 
 
 # def test_input():
