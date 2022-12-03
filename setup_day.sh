@@ -21,7 +21,7 @@ main() {
     sed -i "" "s;_2000;_$1;g;" "$local_dir"/challenge.py
 
     # Test structure
-    mkdir -p "$test_dir"    
+    mkdir -p "$test_dir"
     cp test/unit/test_template.py "$test_dir"/test_day"$2".py
     sed -i "" "s;day0;day$2;g;" "$local_dir"/test_day"$2".py
     sed -i "" "s;_2000;_$1;g;" "$local_dir"/test_day"$2".py
