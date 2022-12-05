@@ -3,13 +3,12 @@ def open_input(input_path: str) -> list[str]:
 
     - Remove any extra lines at the end of the input files (if present, due to auto-formatting)
     - Remove newline characters for individual element strings
-    - Strip any whitespace
     """
     with open(input_path, 'r') as f:
         lines = f.readlines()
 
     line_data = lines[:-1] if lines[-1] == '' else lines
-    data = [line_item.replace('\n', '').strip() for line_item in line_data]
+    data = [line_item.replace('\n', '') for line_item in line_data]
 
     return data
 
