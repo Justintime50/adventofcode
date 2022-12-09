@@ -6,7 +6,7 @@ def main():
     answer_1 = get_answer(data)
     # answer_2 = get_answer(data)
 
-    print(answer_1)
+    # print(answer_1)
     # print(answer_2)
 
     return answer_1
