@@ -16,8 +16,8 @@ def get_answer(data):
     """
     -
     """
-    for item in data:
-        print(item)
+    for index, line in enumerate(data):
+        print(line)
 
 
 if __name__ == '__main__':
