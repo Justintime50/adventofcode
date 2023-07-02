@@ -20,7 +20,7 @@ An advent calendar of coding challenges. <https://adventofcode.com>
 
 ```bash
 # Install locally
-make install
+just install
 ```
 
 ## Usage
@@ -48,7 +48,7 @@ venv/bin/python adventofcode/_2022/day1/challenge.py
 
 ```bash
 # Get a comprehensive list of development tools
-make help
+just --list
 ```
 
 ## Friends to Keep an Eye On
