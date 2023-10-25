@@ -9,6 +9,7 @@ Recursively run this until no seats change state
 
 QUESTION: How many seats end up occupied?
 """
+
 from adventofcode.utils import open_input
 
 
