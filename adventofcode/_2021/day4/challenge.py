@@ -100,9 +100,9 @@ def check_board_for_wins(board):
         board_won = all('X' in num for num in line)
 
         if board_won:
-            board_unmarked_sum = sum([
-                int(num.replace('X', '')) for num in transposed_board for num in num if 'X' not in num
-            ])
+            board_unmarked_sum = sum(
+                [int(num.replace('X', '')) for num in transposed_board for num in num if 'X' not in num]
+            )
             return board_won, board_unmarked_sum
 
     return board_won, 0
