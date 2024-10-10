@@ -5,10 +5,10 @@ with open('README.md', 'r') as fh:
     long_description = fh.read()
 
 DEV_REQUIREMENTS = [
-    'black == 23.*',
-    'flake8 == 6.*',
+    'black == 24.*',
+    'flake8 == 7.*',
     'isort == 5.*',
-    'pytest == 7.*',
+    'pytest == 8.*',
     'pytest-cov == 4.*',
 ]
 
@@ -32,5 +32,5 @@ setuptools.setup(
     extras_require={
         'dev': DEV_REQUIREMENTS,
     },
-    python_requires='>=3.9, <4',
+    python_requires='>=3.10, <4',
 )
