@@ -9,7 +9,7 @@ DEV_REQUIREMENTS = [
     'flake8 == 7.*',
     'isort == 5.*',
     'pytest == 8.*',
-    'pytest-cov == 4.*',
+    'pytest-cov == 5.*',
 ]
 
 # NOTE: This repository is not intended to be distributed as a package and as such is not setup as one correctly

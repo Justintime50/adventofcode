@@ -79,13 +79,15 @@ def format_data(data):
         if 'no other bags' in bag_content:
             continue
         else:
-            bags.append([
-                bag_type,
+            bags.append(
                 [
-                    [re.sub(r'bags?$', '', content).strip().lower()[2:], content[:2].strip()]
-                    for content in bag_content.split(',')
-                ],
-            ])
+                    bag_type,
+                    [
+                        [re.sub(r'bags?$', '', content).strip().lower()[2:], content[:2].strip()]
+                        for content in bag_content.split(',')
+                    ],
+                ]
+            )
             rule = re.search(fr'\d+ {BAG_TYPE}', bag_data)
             if rule:
                 rules.append([bag_type, rule.group()[:1].strip()])
