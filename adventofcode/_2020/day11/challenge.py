@@ -14,7 +14,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2020/day11/input.txt')
+    data = open_input("adventofcode/_2020/day11/input.txt")
     generate_seat_map(data)
 
     # for line in data:
@@ -69,5 +69,5 @@ def generate_seat_map(data):
         break
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

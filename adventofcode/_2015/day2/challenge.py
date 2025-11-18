@@ -2,7 +2,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2015/day2/input.txt')
+    data = open_input("adventofcode/_2015/day2/input.txt")
     answer_1, answer_2 = get_answer(data)
 
     print(answer_1, answer_2)
@@ -14,7 +14,7 @@ def get_answer(data):
     total_wrapping_paper_required = total_ribbon_required = 0
 
     for package in data:
-        package_dims = package.lower().split('x')
+        package_dims = package.lower().split("x")
         length = int(package_dims[0])
         width = int(package_dims[1])
         height = int(package_dims[2])
@@ -37,5 +37,5 @@ def get_answer(data):
     return total_wrapping_paper_required, total_ribbon_required
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

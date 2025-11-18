@@ -2,7 +2,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2022/day9/input.txt')
+    data = open_input("adventofcode/_2022/day9/input.txt")
     answer_1 = get_answer(data)
     # answer_2 = get_answer(data)
 
@@ -25,7 +25,7 @@ def get_answer(data):
     for line in data:
         direction, distance = line.split()
 
-        if direction == 'U':
+        if direction == "U":
             for i in range(int(distance)):
                 # 1. Assign the last cords to them before we change "current" cords
                 last_head_cords = current_head_cords
@@ -41,7 +41,7 @@ def get_answer(data):
                     current_tail_cords = last_head_cords
                     tail_visited.add((last_head_cords[0], last_head_cords[1]))
 
-        elif direction == 'D':
+        elif direction == "D":
             for i in range(int(distance)):
                 # 1. Assign the last cords to them before we change "current" cords
                 last_head_cords = current_head_cords
@@ -57,7 +57,7 @@ def get_answer(data):
                     current_tail_cords = last_head_cords
                     tail_visited.add((last_head_cords[0], last_head_cords[1]))
 
-        elif direction == 'L':
+        elif direction == "L":
             for i in range(int(distance)):
                 # 1. Assign the last cords to them before we change "current" cords
                 last_head_cords = current_head_cords
@@ -73,7 +73,7 @@ def get_answer(data):
                     current_tail_cords = last_head_cords
                     tail_visited.add((last_head_cords[0], last_head_cords[1]))
 
-        elif direction == 'R':
+        elif direction == "R":
             for i in range(int(distance)):
                 # 1. Assign the last cords to them before we change "current" cords
                 last_head_cords = current_head_cords
@@ -95,5 +95,5 @@ def get_answer(data):
     return answer_1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

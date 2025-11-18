@@ -2,12 +2,12 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2020/day9/input.txt')
+    data = open_input("adventofcode/_2020/day9/input.txt")
     answer_1 = find_cypher_weakness_part_1(data)
     answer_2 = find_cypher_weakness_part_2(data, int(answer_1))
 
-    print('Xmas Cypher Weakness part 1:', answer_1)
-    print('Xmas Cypher Weakness part 2:', answer_2)
+    print("Xmas Cypher Weakness part 1:", answer_1)
+    print("Xmas Cypher Weakness part 2:", answer_2)
 
     return answer_1, answer_2
 
@@ -63,5 +63,5 @@ def find_cypher_weakness_part_2(data, invalid_number):
     return int(answer)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

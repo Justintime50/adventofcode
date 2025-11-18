@@ -2,7 +2,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2022/day10/input.txt')
+    data = open_input("adventofcode/_2022/day10/input.txt")
     answer_1 = get_answer(data)
     # answer_2 = get_answer(data)
 
@@ -22,10 +22,10 @@ def get_answer(data):
     checks = []
     for item in data:
         line = item.split()
-        if line[0] == 'noop':
+        if line[0] == "noop":
             cycle += 1
             check_cycle(cycle, register, checks)
-        elif line[0] == 'addx':
+        elif line[0] == "addx":
             for i in range(2):
                 cycle += 1
                 check_cycle(cycle, register, checks)
@@ -44,5 +44,5 @@ def check_cycle(cycle, register, checks):
         checks.append(signal_strength)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

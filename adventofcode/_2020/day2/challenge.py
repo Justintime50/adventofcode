@@ -4,26 +4,26 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2020/day2/input.txt')
+    data = open_input("adventofcode/_2020/day2/input.txt")
     answer_1, answer_2 = iterate_password_data(data)
 
-    print('Number of valid passwords part 1:', answer_1)
-    print('Number of valid passwords part 2:', answer_2)
+    print("Number of valid passwords part 1:", answer_1)
+    print("Number of valid passwords part 2:", answer_2)
 
     return answer_1, answer_2
 
 
 def iterate_password_data(data):
-    re_match = re.compile(r'(?P<min>\d+)-(?P<max>\d+) (?P<letter>\w+): (?P<password>.+)')
+    re_match = re.compile(r"(?P<min>\d+)-(?P<max>\d+) (?P<letter>\w+): (?P<password>.+)")
     valid_password_count_1 = 0
     valid_password_count_2 = 0
 
     for line in data:
         regex_line = re_match.search(line.strip())
-        minimum = int(regex_line['min'])
-        maximum = int(regex_line['max'])
-        letter = regex_line['letter']
-        password = regex_line['password']
+        minimum = int(regex_line["min"])
+        maximum = int(regex_line["max"])
+        letter = regex_line["letter"]
+        password = regex_line["password"]
         if check_valid_password_1(minimum, maximum, letter, password):
             valid_password_count_1 += 1
         if check_valid_password_2(minimum, maximum, letter, password):
@@ -63,5 +63,5 @@ def check_valid_password_2(minimum, maximum, letter, password):
         return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

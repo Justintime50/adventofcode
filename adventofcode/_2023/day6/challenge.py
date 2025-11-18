@@ -4,7 +4,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2023/day6/input.txt')
+    data = open_input("adventofcode/_2023/day6/input.txt")
     answer_1 = get_answer(data)
     answer_2 = get_answer(data, part_2=True)
 
@@ -26,8 +26,8 @@ def get_answer(data, part_2: bool = False):
     # the low and high ends until you find where games are no longer possible and then taking the difference
     # between those numbers to get your answer so we don't have to iterate two hundred trillion times
     game_results = []
-    times = [''.join([i for i in data[0].split()[1:]])] if part_2 else data[0].split()[1:]
-    records = [''.join([i for i in data[1].split()[1:]])] if part_2 else data[1].split()[1:]
+    times = ["".join([i for i in data[0].split()[1:]])] if part_2 else data[0].split()[1:]
+    records = ["".join([i for i in data[1].split()[1:]])] if part_2 else data[1].split()[1:]
 
     for i in range(len(times)):
         time = int(times[i])
@@ -55,5 +55,5 @@ def get_answer(data, part_2: bool = False):
     return answer
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

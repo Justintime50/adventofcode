@@ -2,7 +2,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2021/day1/input.txt')
+    data = open_input("adventofcode/_2021/day1/input.txt")
     answer_1 = calculate_depth_increase(data, chunk_size=1)
     answer_2 = calculate_depth_increase(data, chunk_size=3)
 
@@ -43,5 +43,5 @@ def calculate_depth_increase(data: list, chunk_size: str = 3) -> int:
     return depth_increases
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -3,16 +3,16 @@ import os
 from adventofcode.utils import open_input
 
 
-STARTING_JOLTS = int(os.getenv('STARTING_JOLTS', 0))
+STARTING_JOLTS = int(os.getenv("STARTING_JOLTS", 0))
 
 
 def main():
-    data = open_input('adventofcode/_2020/day10/input.txt')
+    data = open_input("adventofcode/_2020/day10/input.txt")
     device_rating, joltage_list = get_joltage(data)
     answer_1 = check_each_adapter(joltage_list)
     part_2(joltage_list, device_rating)
 
-    print('Distrubution:', answer_1)
+    print("Distrubution:", answer_1)
 
     return answer_1
 
@@ -21,7 +21,7 @@ def get_joltage(data):
     """Get the joltage rating of your device (3 more than the highest number)"""
     joltage = []
     for item in data:
-        joltage.append(int(item.replace('\n', '')))
+        joltage.append(int(item.replace("\n", "")))
     device_rating = max(joltage) + 3
     # print('Joltage:', device_rating)
     return device_rating, sorted(joltage)
@@ -61,5 +61,5 @@ def part_2(joltage_list, device_rating):
     pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

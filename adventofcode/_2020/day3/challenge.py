@@ -3,17 +3,17 @@ import os
 from adventofcode.utils import open_input
 
 
-RISE = int(os.getenv('RISE', 1))
-RUN = int(os.getenv('RUN', 3))
+RISE = int(os.getenv("RISE", 1))
+RUN = int(os.getenv("RUN", 3))
 
 
 def main():
-    data = open_input('adventofcode/_2020/day3/input.txt')
+    data = open_input("adventofcode/_2020/day3/input.txt")
     answer_1 = sled_down_hill(data, RISE, RUN)
     answer_2 = part_2_helper(data)
 
-    print(f'Trees hit with a slope of -{RISE}/{RUN}: {answer_1}')
-    print(f'Multiplied trees hit for part 2: {answer_2}')
+    print(f"Trees hit with a slope of -{RISE}/{RUN}: {answer_1}")
+    print(f"Multiplied trees hit for part 2: {answer_2}")
 
     return answer_1, answer_2
 
@@ -38,7 +38,7 @@ def sled_down_hill(data, rise, run):
     USAGE: RISE=1 RUN=3 venv/bin/python day3.py
     """
     if rise <= 0 or run <= 0:
-        raise ValueError('Rise and Run must be greater than 0')
+        raise ValueError("Rise and Run must be greater than 0")
 
     trees_hit = 0
     new_rise = rise
@@ -51,7 +51,7 @@ def sled_down_hill(data, rise, run):
             hill_line = (line.strip() + line.strip()) * (i + 1)
             # print(hill_line)
             # print(hill_line[check_index])
-            if hill_line[check_index] == '#':
+            if hill_line[check_index] == "#":
                 trees_hit += 1
             new_run = check_index + run
             new_rise += rise
@@ -74,5 +74,5 @@ def part_2_helper(data):
     return slope_1 * slope_2 * slope_3 * slope_4 * slope_5
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

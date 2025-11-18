@@ -2,12 +2,12 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2020/day13/input.txt')
+    data = open_input("adventofcode/_2020/day13/input.txt")
     timestamp = int(data[:1][0])
     bus_ids = data[1:2]
     answer_1 = iterate_bus_ids(timestamp, bus_ids)
 
-    print('Answer:', answer_1)
+    print("Answer:", answer_1)
 
     return answer_1
 
@@ -17,10 +17,10 @@ def iterate_bus_ids(timestamp, bus_ids):
     the closest timestamp to the original. Then subtract the two timestamps
     and multiply by the bus ID that had the closest departing timestamp.
     """
-    ids = bus_ids[0].split(',')
+    ids = bus_ids[0].split(",")
     new_timestamps = []
     for bus_id in ids:
-        if bus_id == 'x':
+        if bus_id == "x":
             continue
         else:
             new_timestamp = int(bus_id)
@@ -36,5 +36,5 @@ def iterate_bus_ids(timestamp, bus_ids):
     return answer
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

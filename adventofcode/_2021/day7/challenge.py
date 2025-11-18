@@ -4,8 +4,8 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2021/day7/input.txt')
-    split_data = [int(crab) for crab in data[0].split(',')]
+    data = open_input("adventofcode/_2021/day7/input.txt")
+    split_data = [int(crab) for crab in data[0].split(",")]
 
     best_number = find_median(split_data)
     answer_1 = calculate_fuel(split_data, best_number)
@@ -43,5 +43,5 @@ def calculate_fuel(data, best_number: int):
     return total_fuel
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -2,7 +2,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2023/day4/input.txt')
+    data = open_input("adventofcode/_2023/day4/input.txt")
     answer_1 = get_answer(data)
     # answer_2 = get_answer(data)
 
@@ -19,7 +19,7 @@ def get_answer(data):
     """
     answer = 0
     for index, line in enumerate(data):
-        sanatized_line = line.split(':')[1].split('|')
+        sanatized_line = line.split(":")[1].split("|")
         winnings = sanatized_line[0].split()
         my_nums = sanatized_line[1].split()
 
@@ -39,5 +39,5 @@ def get_answer(data):
     return answer
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -2,7 +2,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2000/day0/sample.txt')
+    data = open_input("adventofcode/_2000/day0/sample.txt")
     answer_1 = get_answer(data)
     # answer_2 = get_answer(data)
 
@@ -20,5 +20,5 @@ def get_answer(data):
         print(line)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

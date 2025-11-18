@@ -2,7 +2,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2022/day1/input.txt')
+    data = open_input("adventofcode/_2022/day1/input.txt")
     answer_1, answer_2 = get_answer(data)
 
     print(answer_1)
@@ -21,7 +21,7 @@ def get_answer(data):
     calories_per_elf = []
     elf_calories = 0
     for entry in data:
-        if entry == '':
+        if entry == "":
             calories_per_elf.append(elf_calories)
             elf_calories = 0
         else:
@@ -33,5 +33,5 @@ def get_answer(data):
     return answer_1, answer_2
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

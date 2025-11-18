@@ -5,7 +5,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2021/day5/input.txt')
+    data = open_input("adventofcode/_2021/day5/input.txt")
     pairs = build_coordinate_pairs(data)
 
     # We need to find the biggest number in the entire set so we can naively build the diagram x and y size to match
@@ -26,8 +26,8 @@ def build_coordinate_pairs(data) -> tuple[list[tuple], list[tuple]]:
     pairs_data = []
     for line in data:
         # Skip [1] which is the arrow
-        pair_one = tuple(line.split()[0].split(','))
-        pair_two = tuple(line.split()[2].split(','))
+        pair_one = tuple(line.split()[0].split(","))
+        pair_two = tuple(line.split()[2].split(","))
 
         pairs_data.append([pair_one, pair_two])
 
@@ -42,7 +42,7 @@ def generate_diagram(pairs: list[tuple], max_num_in_data: int):
     # before proceeding to fill it with real data
     diagram = []
     for entry in range(max_num_in_data):
-        diagram.append(['.'] * (max_num_in_data + 2))  # +2 here to deal with index offset
+        diagram.append(["."] * (max_num_in_data + 2))  # +2 here to deal with index offset
     # print(len(diagram[0]))
 
     # Iterate over each line of pair data and fill out the diagram
@@ -56,28 +56,28 @@ def generate_diagram(pairs: list[tuple], max_num_in_data: int):
         if x1 != x2 and y1 != y2:
             continue
 
-        line_direction = 'horizontal' if y1 == y2 else 'vertical'
-        line_to_mark = sorted([x1, x2]) if line_direction == 'horizontal' else sorted([y1, y2])
+        line_direction = "horizontal" if y1 == y2 else "vertical"
+        line_to_mark = sorted([x1, x2]) if line_direction == "horizontal" else sorted([y1, y2])
         # print(line_to_mark)
 
         # Transpose the board for vertical manipulation
         transposed_diagram = list(map(list, zip(*diagram)))
-        diagram = transposed_diagram if line_direction == 'vertical' else diagram
+        diagram = transposed_diagram if line_direction == "vertical" else diagram
 
         for num in range(line_to_mark[0], line_to_mark[1] + 1):
             # first_index is the row
-            first_index = y1 if line_direction == 'horizontal' else x1
+            first_index = y1 if line_direction == "horizontal" else x1
             # second_index is the cell
             second_index = num
             # print(first_index, second_index)
-            if diagram[first_index][second_index] == '.':
+            if diagram[first_index][second_index] == ".":
                 diagram[first_index][second_index] = 1
             else:
                 diagram[first_index][second_index] += 1
 
         # Untranspose the diagram for the next iteration?
         transposed_diagram = list(map(list, zip(*diagram)))
-        diagram = transposed_diagram if line_direction == 'vertical' else diagram
+        diagram = transposed_diagram if line_direction == "vertical" else diagram
 
     # for line in diagram:
     #     print(line)
@@ -95,5 +95,5 @@ def calculate_overlaps(diagram):
     return num_overlaps
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -2,7 +2,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2023/day2/input.txt')
+    data = open_input("adventofcode/_2023/day2/input.txt")
     answer_1 = get_answer(data)
     answer_2 = get_answer(data, part_2=True)
 
@@ -26,10 +26,10 @@ def get_answer(data, part_2: bool = False):
     games = []
     for index, line in enumerate(data):
         game = []
-        unsanatized_rounds = line.split(':')[1].split(';')
+        unsanatized_rounds = line.split(":")[1].split(";")
         for round_index, cubes in enumerate(unsanatized_rounds):
             cubes_list = cubes.split()
-            sanatized_cubes = [entry.replace(',', '') for entry in cubes_list][::-1]
+            sanatized_cubes = [entry.replace(",", "") for entry in cubes_list][::-1]
             round_combos = {}
             for entry_index, entry in enumerate(sanatized_cubes):
                 # Once we find the color to match with a number, build it
@@ -45,9 +45,9 @@ def get_answer(data, part_2: bool = False):
         game_possible = True
         max_red, max_green, max_blue = 0, 0, 0
         for round in game:
-            red = round.get('red', 0)
-            green = round.get('green', 0)
-            blue = round.get('blue', 0)
+            red = round.get("red", 0)
+            green = round.get("green", 0)
+            blue = round.get("blue", 0)
 
             # part 2
             if part_2:
@@ -72,5 +72,5 @@ def get_answer(data, part_2: bool = False):
     return answer
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

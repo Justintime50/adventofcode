@@ -7,8 +7,8 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2021/day6/input.txt')
-    school = [int(fish) for fish in data[0].split(',')]
+    data = open_input("adventofcode/_2021/day6/input.txt")
+    school = [int(fish) for fish in data[0].split(",")]
 
     answer_1 = spawn_new_fish(school, days_to_spawn_fish=80)
     answer_2 = spawn_new_fish(school, days_to_spawn_fish=256)
@@ -51,5 +51,5 @@ def spawn_new_fish(school: list[int], days_to_spawn_fish: int = 80) -> int:
     return number_fish_in_school
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

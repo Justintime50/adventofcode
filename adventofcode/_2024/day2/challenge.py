@@ -1,11 +1,12 @@
 from adventofcode.utils import open_input
 
+
 MIN = 1
 MAX = 3
 
 
 def main():
-    data = open_input('adventofcode/_2024/day2/input.txt')
+    data = open_input("adventofcode/_2024/day2/input.txt")
     answer_1 = get_answer(data)
     # answer_2 = get_answer(data, True)
 
@@ -52,5 +53,5 @@ def get_answer(data, part_2=False):
     return count
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -5,11 +5,11 @@ with open('README.md', 'r') as fh:
     long_description = fh.read()
 
 DEV_REQUIREMENTS = [
-    'black == 24.*',
+    'black == 25.*',
     'flake8 == 7.*',
-    'isort == 5.*',
-    'pytest == 8.*',
-    'pytest-cov == 5.*',
+    'isort == 7.*',
+    'pytest == 9.*',
+    'pytest-cov == 7.*',
 ]
 
 # NOTE: This repository is not intended to be distributed as a package and as such is not setup as one correctly

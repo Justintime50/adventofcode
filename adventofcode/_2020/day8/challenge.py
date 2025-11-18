@@ -12,7 +12,7 @@ def calculate_num():
     total = 0
     lines_run = []
     total = run_recursion(0, lines_run, total)
-    print('Accumulator Value:', total)
+    print("Accumulator Value:", total)
     return total
 
 
@@ -24,24 +24,24 @@ def run_recursion(index, lines_run, total):
     # print(format_data()[index])
     # print(lines_run)
     if index in lines_run:
-        print('Already visited', index, '- stopping!')
+        print("Already visited", index, "- stopping!")
         return total
 
-    if action == 'nop':
+    if action == "nop":
         lines_run.append(index)
         return run_recursion(index + 1, lines_run, total)
-    elif action == 'acc':
-        if direction == '+':
+    elif action == "acc":
+        if direction == "+":
             total += number
-        elif direction == '-':
+        elif direction == "-":
             total -= number
         lines_run.append(index)
         index += 1
-    elif action == 'jmp':
+    elif action == "jmp":
         lines_run.append(index)
-        if direction == '+':
+        if direction == "+":
             index += number
-        elif direction == '-':
+        elif direction == "-":
             index -= number
 
     # print('index:', index)
@@ -50,7 +50,7 @@ def run_recursion(index, lines_run, total):
 
 def format_data():
     """Format the data into a usable structure"""
-    data = open_input('adventofcode/_2020/day8/input.txt')
+    data = open_input("adventofcode/_2020/day8/input.txt")
     formatted_data = []
 
     for index, line in enumerate(data):
@@ -62,5 +62,5 @@ def format_data():
     return formatted_data
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

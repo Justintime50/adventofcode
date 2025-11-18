@@ -2,7 +2,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2022/day5/input.txt')
+    data = open_input("adventofcode/_2022/day5/input.txt")
     answer_1 = get_answer(data, 1)
     answer_2 = get_answer(data, 2)
 
@@ -22,7 +22,7 @@ def get_answer(data, part):
     instruction_index_start = 0
     for line_index, line in enumerate(data):
         stack_depth += 1
-        if line == '':  # Separate the instructions from stacks
+        if line == "":  # Separate the instructions from stacks
             instruction_index_start = line_index + 1
             break
         for char_index, _ in enumerate(line):
@@ -31,8 +31,8 @@ def get_answer(data, part):
                     # list order is important, BOTTOM TO TOP = FIRST to LAST
                     try:
                         char_in_question = data[line_index - line_index_up][char_index]
-                        if char_in_question == ' ':
-                            stack.append('!')  # these are empty spaces
+                        if char_in_question == " ":
+                            stack.append("!")  # these are empty spaces
                     except IndexError:
                         pass
                     if char_in_question.isalpha():
@@ -40,7 +40,7 @@ def get_answer(data, part):
 
                     # Once we hit the end, build list
                     if line_index_up + 1 == stack_depth:
-                        cleaned_stack = [item for item in stack if item != '!']
+                        cleaned_stack = [item for item in stack if item != "!"]
                         stacks.append(cleaned_stack)
                         stack = []
 
@@ -52,7 +52,7 @@ def get_answer(data, part):
 def run_instructions(data, instruction_index_start, stacks, part):
     instructions = data[instruction_index_start:]
     for line_index, line in enumerate(instructions):
-        line_list = line.split(' ')
+        line_list = line.split(" ")
         quantity = int(line_list[1])
         from_column = int(line_list[3])
         to_column = int(line_list[5])
@@ -75,12 +75,12 @@ def run_instructions(data, instruction_index_start, stacks, part):
                 item_to_move = from_items.pop(-quantity + times)
                 to_items.append(item_to_move)
 
-    answer = ''
+    answer = ""
     for stack in stacks:
         answer += stack[-1]
 
     return answer
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

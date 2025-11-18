@@ -2,7 +2,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2021/day9/input.txt')
+    data = open_input("adventofcode/_2021/day9/input.txt")
     answer_1 = find_lowest_points(data)
 
     # TODO: To get the answer for part2, we can re-use the logic we have for finding the lowest point
@@ -46,5 +46,5 @@ def find_lowest_points(data) -> int:
     return risk_level
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

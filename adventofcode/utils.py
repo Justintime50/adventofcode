@@ -4,11 +4,11 @@ def open_input(input_path: str) -> list[str]:
     - Remove any extra lines at the end of the input files (if present, due to auto-formatting)
     - Remove newline characters for individual element strings
     """
-    with open(input_path, 'r') as f:
+    with open(input_path, "r") as f:
         lines = f.readlines()
 
-    line_data = lines[:-1] if lines[-1] == '' else lines
-    data = [line_item.replace('\n', '') for line_item in line_data]
+    line_data = lines[:-1] if lines[-1] == "" else lines
+    data = [line_item.replace("\n", "") for line_item in line_data]
 
     return data
 
@@ -19,7 +19,7 @@ def open_input_literal(input_path: str) -> str:
     This should be considered the "legacy" approach or only used when the input data has a structure
     that requires custom parsing.
     """
-    with open(input_path, 'r') as f:
+    with open(input_path, "r") as f:
         lines = f.read()
 
     return lines

@@ -4,14 +4,14 @@ import re
 from adventofcode.utils import open_input
 
 
-BAG_TYPE = os.getenv('BAG_TYPE', 'shiny gold')
+BAG_TYPE = os.getenv("BAG_TYPE", "shiny gold")
 
 
 def main():
-    data = open_input('adventofcode/_2020/day7/input.txt')
+    data = open_input("adventofcode/_2020/day7/input.txt")
     answer_1 = get_num_bags(data)
 
-    print('Bag total:', answer_1)
+    print("Bag total:", answer_1)
     # print('Part 2:', answer_2)
 
     return answer_1  # TODO: Return `answer_2` here
@@ -73,27 +73,27 @@ def format_data(data):
     rules = []
     bags = []
     for bag_data in data:
-        bag = bag_data.split('contain')
-        bag_type = bag[0].replace('bags', '').strip().lower()
-        bag_content = bag[1].replace('.', '')
-        if 'no other bags' in bag_content:
+        bag = bag_data.split("contain")
+        bag_type = bag[0].replace("bags", "").strip().lower()
+        bag_content = bag[1].replace(".", "")
+        if "no other bags" in bag_content:
             continue
         else:
             bags.append(
                 [
                     bag_type,
                     [
-                        [re.sub(r'bags?$', '', content).strip().lower()[2:], content[:2].strip()]
-                        for content in bag_content.split(',')
+                        [re.sub(r"bags?$", "", content).strip().lower()[2:], content[:2].strip()]
+                        for content in bag_content.split(",")
                     ],
                 ]
             )
-            rule = re.search(fr'\d+ {BAG_TYPE}', bag_data)
+            rule = re.search(rf"\d+ {BAG_TYPE}", bag_data)
             if rule:
                 rules.append([bag_type, rule.group()[:1].strip()])
     # print(rules)
     return rules, bags
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -4,7 +4,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2022/day7/input.txt')
+    data = open_input("adventofcode/_2022/day7/input.txt")
     answer_1, answer_2 = get_answer(data)
 
     print(answer_1)
@@ -18,10 +18,10 @@ def get_answer(data):
     totals = defaultdict(int)
     for line in data:
         split_line = line.split()
-        if split_line[1] == 'ls':
+        if split_line[1] == "ls":
             continue
-        elif split_line[1] == 'cd':
-            if split_line[2] == '..':
+        elif split_line[1] == "cd":
+            if split_line[2] == "..":
                 path.pop()
             else:
                 totals[split_line[2]] += 0
@@ -29,7 +29,7 @@ def get_answer(data):
         elif split_line[0].isnumeric():
             bytes = int(split_line[0])
             for i in range(len(path) + 1):
-                last_dir_on_path = '/'.join(path[:i])
+                last_dir_on_path = "/".join(path[:i])
                 totals[last_dir_on_path] += bytes
 
     dir_size_criteria = 10_0000
@@ -37,7 +37,7 @@ def get_answer(data):
 
     total_space = 70_000_000
     space_needed = 30_000_000
-    free_space = total_space - totals['/']
+    free_space = total_space - totals["/"]
     update_space = space_needed - free_space
 
     answer_2 = min([total for total in totals.values() if total >= update_space])
@@ -45,5 +45,5 @@ def get_answer(data):
     return answer_1, answer_2
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

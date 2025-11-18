@@ -2,7 +2,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2023/day1/input.txt')
+    data = open_input("adventofcode/_2023/day1/input.txt")
     answer_1 = get_answer_1(data)
     answer_2 = get_answer_2(data)
 
@@ -47,7 +47,7 @@ def get_answer_2(data):
         for char_index, char in enumerate(line):
             if char.isdigit():
                 digits.append(char)
-            for digit, value in enumerate(['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']):
+            for digit, value in enumerate(["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]):
                 if line[char_index:].startswith(value):
                     # Cheating by using the index of the list of spelled out numbers as the stored digits plus one
                     digits.append(str(digit + 1))
@@ -58,5 +58,5 @@ def get_answer_2(data):
     return answer
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

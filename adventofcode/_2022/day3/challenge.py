@@ -4,7 +4,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2022/day3/input.txt')
+    data = open_input("adventofcode/_2022/day3/input.txt")
     answer_1 = get_answer_1(data)
     answer_2 = get_answer_2(data)
 
@@ -71,5 +71,5 @@ def get_answer_2(data):
     return points
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

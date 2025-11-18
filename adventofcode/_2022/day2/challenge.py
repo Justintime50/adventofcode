@@ -2,7 +2,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2022/day2/input.txt')
+    data = open_input("adventofcode/_2022/day2/input.txt")
     answer_1, answer_2 = get_answer(data)
 
     print(answer_1)
@@ -37,32 +37,32 @@ def get_answer(data):
     Z = win
     """
     points_mapping = {
-        'A': 1,
-        'B': 2,
-        'C': 3,
-        'X': 1,
-        'Y': 2,
-        'Z': 3,
+        "A": 1,
+        "B": 2,
+        "C": 3,
+        "X": 1,
+        "Y": 2,
+        "Z": 3,
     }
 
     winning_mappings = {
-        'Z': 'B',
-        'X': 'C',
-        'Y': 'A',
+        "Z": "B",
+        "X": "C",
+        "Y": "A",
     }
     inverse_win = {v: k for k, v in winning_mappings.items()}
 
     losing_mappings = {
-        'Z': 'A',
-        'X': 'B',
-        'Y': 'C',
+        "Z": "A",
+        "X": "B",
+        "Y": "C",
     }
     inverse_lose = {v: k for k, v in losing_mappings.items()}
 
     draw_mappings = {
-        'X': 'A',
-        'Y': 'B',
-        'Z': 'C',
+        "X": "A",
+        "Y": "B",
+        "Z": "C",
     }
     inverse_draw = {v: k for k, v in draw_mappings.items()}
 
@@ -73,7 +73,7 @@ def get_answer(data):
     answer_1_total = 0
     answer_2_total = 0
     for battle in data:
-        pieces = battle.split(' ')
+        pieces = battle.split(" ")
         opponent_choice = pieces[0].upper()  # ABC
         my_choice = pieces[1].upper()  # XYZ
 
@@ -88,8 +88,8 @@ def get_answer(data):
         answer_1_total += points_mapping[my_choice]
 
         # PART 2
-        draw_char = 'Y'
-        win_char = 'Z'
+        draw_char = "Y"
+        win_char = "Z"
         if my_choice == draw_char:
             new_choice = inverse_draw[opponent_choice]
             answer_2_total += points_mapping[new_choice]
@@ -106,5 +106,5 @@ def get_answer(data):
     return answer_1_total, answer_2_total
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

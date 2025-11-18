@@ -2,7 +2,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2022/day4/input.txt')
+    data = open_input("adventofcode/_2022/day4/input.txt")
     answer_1, answer_2 = get_answer(data)
 
     print(answer_1)
@@ -21,15 +21,15 @@ def get_answer(data):
     new_1 = []
     new_2 = []
     for item in data:
-        elves = item.split(',')
+        elves = item.split(",")
         pair_1 = elves[0]
-        pair_1_min = pair_1.split('-')[0]
-        pair_1_max = pair_1.split('-')[1]
+        pair_1_min = pair_1.split("-")[0]
+        pair_1_max = pair_1.split("-")[1]
         new_1.append((int(pair_1_min), int(pair_1_max)))
 
         pair_2 = elves[1]
-        pair_2_min = pair_2.split('-')[0]
-        pair_2_max = pair_2.split('-')[1]
+        pair_2_min = pair_2.split("-")[0]
+        pair_2_max = pair_2.split("-")[1]
         new_2.append((int(pair_2_min), int(pair_2_max)))
 
     # print(new)
@@ -59,5 +59,5 @@ def get_answer(data):
     return overlapping_part_1, overlapping_part_2
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

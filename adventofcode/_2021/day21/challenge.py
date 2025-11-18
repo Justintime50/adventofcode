@@ -2,7 +2,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2021/day21/input.txt')
+    data = open_input("adventofcode/_2021/day21/input.txt")
     answer_1 = get_answer(data)
 
     print(answer_1)
@@ -74,5 +74,5 @@ def roll_dice(dice_roll: int, total_dice_rolls: int, player_new_position: int, p
     return dice_roll, total_dice_rolls, player_new_position, player_score
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

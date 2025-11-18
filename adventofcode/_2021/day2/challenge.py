@@ -2,7 +2,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2021/day2/input.txt')
+    data = open_input("adventofcode/_2021/day2/input.txt")
     answer_1 = calculate_position(data)
     answer_2 = calculate_position_with_aim(data)
 
@@ -22,11 +22,11 @@ def calculate_position(data: list[str]) -> int:
         action = split_data[0]
         measurement = int(split_data[1])
 
-        if action == 'forward':
+        if action == "forward":
             horizontal_position += measurement
-        elif action == 'up':
+        elif action == "up":
             depth -= measurement
-        elif action == 'down':
+        elif action == "down":
             depth += measurement
 
     answer = horizontal_position * depth
@@ -46,12 +46,12 @@ def calculate_position_with_aim(data: list[str]) -> int:
         action = split_data[0]
         measurement = int(split_data[1])
 
-        if action == 'forward':
+        if action == "forward":
             horizontal_position += measurement
             depth += aim * measurement
-        elif action == 'up':
+        elif action == "up":
             aim -= measurement
-        elif action == 'down':
+        elif action == "down":
             aim += measurement
 
     answer = horizontal_position * depth
@@ -59,5 +59,5 @@ def calculate_position_with_aim(data: list[str]) -> int:
     return answer
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -2,7 +2,7 @@ from adventofcode.utils import open_input
 
 
 def main():
-    data = open_input('adventofcode/_2021/day10/sample.txt')
+    data = open_input("adventofcode/_2021/day10/sample.txt")
     answer_1 = some_function(data)
     # answer_2 = some_function(data)
 
@@ -13,16 +13,16 @@ def main():
 
 def some_function(data):
     char_pairs = {
-        '(': ')',
-        '[': ']',
-        '{': '}',
-        '<': '>',
+        "(": ")",
+        "[": "]",
+        "{": "}",
+        "<": ">",
     }
     illegal_char_points = {  # noqa
-        ')': 3,
-        ']': 57,
-        '}': 1197,
-        '>': 25137,
+        ")": 3,
+        "]": 57,
+        "}": 1197,
+        ">": 25137,
     }
 
     for line in data:
@@ -43,9 +43,9 @@ def some_function(data):
                     pass
 
             if pair_matched is False:
-                print('corrupted line:', line)
+                print("corrupted line:", line)
                 break
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
