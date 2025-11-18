@@ -54,7 +54,6 @@ jobs:
         with:
           python-version: '3.14'
       - run: just install coverage
-      - uses: coverallsapp/github-action@v2
+      - uses: codecov/codecov-action@v5
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: './coverage.lcov'
+          token: ${{ secrets.CODECOV_TOKEN }}

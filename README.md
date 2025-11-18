@@ -5,7 +5,7 @@
 An advent calendar of coding challenges. <https://adventofcode.com>
 
 [![Build Status](https://github.com/Justintime50/adventofcode/workflows/build/badge.svg)](https://github.com/Justintime50/adventofcode/actions)
-[![Coverage Status](https://coveralls.io/repos/github/Justintime50/adventofcode/badge.svg?branch=main)](https://coveralls.io/github/Justintime50/adventofcode?branch=main)
+[![Coverage Status](https://img.shields.io/codecov/c/github/justintime50/adventofcode)](https://app.codecov.io/github/Justintime50/adventofcode)
 [![Licence](https://img.shields.io/github/license/justintime50/adventofcode)](LICENSE)
 
 <img src="https://raw.githubusercontent.com/justintime50/assets/main/src/adventofcode/showcase.png" alt="Showcase">
