@@ -1,3 +1,27 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adventofcode"
+version = "0.1.0"
+description = "An Advent calendar of coding challenges."
+readme = "README.md"
+requires-python = ">=3.10,<4"
+license = { text = "MIT" }
+authors = [{ name = "Justintime50" }]
+urls = { Homepage = "http://github.com/justintime50/adventofcode" }
+optional-dependencies = { dev = [
+    "black == 25.*",
+    "flake8 == 7.*",
+    "isort == 7.*",
+    "pytest == 9.*",
+    "pytest-cov == 7.*",
+] }
+
+[tool.setuptools.packages.find]
+exclude = ["examples", "test"]
+
 [tool.black]
 line-length = 120
 
