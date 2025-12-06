@@ -6,7 +6,7 @@ def main():
     answer_1 = get_answer(data)
     # answer_2 = get_answer(data)
 
-    # print(answer_1)
+    print(answer_1)
     # print(answer_2)
 
     return answer_1
@@ -18,6 +18,8 @@ def get_answer(data):
     """
     for index, line in enumerate(data):
         print(line)
+
+    return 0
 
 
 if __name__ == "__main__":
