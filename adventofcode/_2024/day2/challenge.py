@@ -1,6 +1,5 @@
 from adventofcode.utils import open_input
 
-
 MIN = 1
 MAX = 3
 

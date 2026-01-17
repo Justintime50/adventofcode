@@ -2,7 +2,6 @@ import re
 
 from adventofcode.utils import open_input_literal
 
-
 # TODO: Clean up code and practice DRY, create reusable functions for rules that repeat
 
 

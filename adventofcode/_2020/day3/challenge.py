@@ -2,7 +2,6 @@ import os
 
 from adventofcode.utils import open_input
 
-
 RISE = int(os.getenv("RISE", 1))
 RUN = int(os.getenv("RUN", 3))
 
